@@ -41,7 +41,7 @@ function ProfileInfo(props) {
   return(
     <div className='profileCardInfo'>
       <Name>{props.name}</Name>
-      <Job>{props.role} na <JobSite target='_blank' href={props.actualJobSite}>{props.ActualJob}</JobSite></Job>
+      <Job>{props.role} na <JobSite target='_blank' href={props.actualJobSite}>{props.actualJob}</JobSite></Job>
       <Location>
         <LocationIcon>
           <svg id="icon-location" viewBox="0 0 32 32">

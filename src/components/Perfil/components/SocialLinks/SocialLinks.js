@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 function SocialLinks() {
 
@@ -57,23 +58,67 @@ function SocialLinks() {
     }
   ]
 
+  const DivSocialLinks = styled.div`
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  `;
+
+  const Link = styled.a`
+    display: inline-flex;
+    width: 55px;
+    height: 55px;
+    margin: 15px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: #fff !important;
+    position: relative;
+    font-size: 21px;
+    flex-shrink: 0;
+    transition: all .3s;
+    @media screen and (min-width:768px){
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    @media screen and (min-width:768px){
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+    }
+  `;
+
+  const Svg = styled.svg`
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  `;
 
   return(
-    <div className="socialLinks">
+    <DivSocialLinks>
       {
         socialInfo.map((social) => (
-          <a 
+          <Link 
             target="_blank" 
             rel="noreferrer" 
             href={social.link} 
             style={{
               background: `${social.gradient}`, 
               boxShadow: `${social.boxShadow}`
-            }} 
-            dangerouslySetInnerHTML={{ __html: `${social.svg}` }} />
+            }}>
+              <span style={{display: 'inline-flex'}}>
+                <Svg dangerouslySetInnerHTML={{ __html: `${social.svg}` }}/>
+              </span>
+            </Link>
         ))
       }
-    </div>
+    </DivSocialLinks>
   );
 }
 

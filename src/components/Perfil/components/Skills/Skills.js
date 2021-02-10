@@ -9,6 +9,13 @@ function Skills(props) {
     font-size: 14px;
     margin: 10px;
     padding: 7px;
+    transition: all ease .3s;
+    cursor: default;
+    &:hover {
+      background: #57ABA8;
+      color: #FFF;
+      transition: all ease .3s;
+    }
   `;
 
   const SkillList = styled.ul`
