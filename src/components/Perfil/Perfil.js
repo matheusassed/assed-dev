@@ -8,7 +8,7 @@ import './Perfil.css';
 function Perfil() {
   return(
     <div className='profileCard'>
-      <Photo photoUrl={'https://i.imgur.com/4OYT2Eh.jpg'}/>
+      <Photo photoUrl={'https://i.imgur.com/CPvxOnJ.jpg'}/>
       <div className='profileCardContent'>
         <ProfileInfo name='Matheus Assed' role='desenvolvedor de distemas' actualJob='ímpar' actualJobSite='http://inpartec.com.br' location='Rio de Janeiro, Brasil' />
         <SocialLinks/>
