@@ -18,6 +18,8 @@ const Formulario = (props) => {
         <label for="telegram">telegram</label>
         <input type="radio" id="call" name="contact" value="call"/>
         <label for="call">ligação</label>
+
+        <input type="submit" value="enviar"/>
       </form>
     </div>
   );
