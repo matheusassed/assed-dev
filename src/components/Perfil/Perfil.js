@@ -1,11 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Photo from './components/Photo/Photo';
 import Skills from './components/Skills/Skills';
+import Skills from './components/Formulario/Formulario';
 import ProfileInfo from './components/ProfileInfo/ProfileInfo';
 import SocialLinks from './components/SocialLinks/SocialLinks';
 import './Perfil.css';
 
-function Perfil() {
+const Perfil = () => {
+  const [formVisibility, setFormVisibility] = useState(false);
+
+  const handleForm = () => {
+    setFormVisibility(!formVisibility);
+  }
+
   return(
     <div className='profileCard'>
       <Photo photoUrl={'https://i.imgur.com/CPvxOnJ.jpg'}/>
@@ -27,6 +34,8 @@ function Perfil() {
           "sql"
         ]}/>
       </div>
+      <div className='arrow' onClick={() => handleForm()}></div>
+      <Formulario visibles={formVisibility}/>
     </div>
   );
 }
