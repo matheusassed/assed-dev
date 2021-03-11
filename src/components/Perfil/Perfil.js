@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Photo from './components/Photo/Photo';
 import Skills from './components/Skills/Skills';
-import Skills from './components/Formulario/Formulario';
+import Formulario from './components/Formulario/Formulario';
 import ProfileInfo from './components/ProfileInfo/ProfileInfo';
 import SocialLinks from './components/SocialLinks/SocialLinks';
 import './Perfil.css';
