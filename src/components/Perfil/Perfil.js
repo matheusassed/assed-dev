@@ -4,12 +4,19 @@ import Skills from './components/Skills/Skills';
 import Formulario from './components/Formulario/Formulario';
 import ProfileInfo from './components/ProfileInfo/ProfileInfo';
 import SocialLinks from './components/SocialLinks/SocialLinks';
+//  
 import './Perfil.css';
 
 const Perfil = () => {
   const [formVisibility, setFormVisibility] = useState(false);
 
   const handleForm = () => {
+    let arrow = document.querySelector('.arrow');
+    if(formVisibility){
+      arrow.classList.remove('rotate');
+    } else {
+      arrow.classList.add('rotate');
+    }
     setFormVisibility(!formVisibility);
   }
 
@@ -34,8 +41,10 @@ const Perfil = () => {
           "sql"
         ]}/>
       </div>
+
       <div className='arrow' onClick={() => handleForm()}></div>
-      <Formulario visibles={formVisibility}/>
+      
+      <Formulario show={formVisibility}/>
     </div>
   );
 }
