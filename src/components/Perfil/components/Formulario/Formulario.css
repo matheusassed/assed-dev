@@ -19,14 +19,17 @@
   display: block;
   margin: 20px auto;
   border-radius: 4px;
-  padding: 4px 8px;
+  padding: 8px 8px;
   background-color: white;
   border: 1px solid #324e63;
   font-family: 'Quicksand', sans-serif;
   color: #324e63;
   outline: none;
 }
-.formulario .btn{
+.formulario .redPlaceholder::placeholder{
+  color: #F00;
+}
+.formulario button{
   display: block;
   margin: 0 auto;
   border: 1px solid transparent;
@@ -39,9 +42,21 @@
   color: #FFF;
   width: max-content;
 }
-.formulario .btn:hover {
+.formulario button:hover {
   background: #FFF;
   color: #57ABA8;
   border: 1px solid #57ABA8;
+  transition: all ease .3s;
+}
+
+.formulario .fieldLabel{
+  position: relative;
+}
+.formulario .fieldLabel .placeholder{
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  opacity: .7;
+  font-size: 16px;
   transition: all ease .3s;
 }

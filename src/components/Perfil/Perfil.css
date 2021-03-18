@@ -24,12 +24,12 @@
   border-top: 3px solid #57ABA8;
   border-left: 3px solid #57ABA8;
   margin: 0 auto;
-  transform: rotate(45deg);
+  transform: rotate(225deg) translateX(30px);
   border-radius: 2px;
   cursor: pointer;
   transition: all ease .3s;
 }
 
 .rotate{
-  transform: rotate(225deg);
+  transform: rotate(45deg);
 }
