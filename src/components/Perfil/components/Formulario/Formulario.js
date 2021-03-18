@@ -109,7 +109,7 @@ const Formulario = (props) => {
             mensagem: '',
             contact: ''
           }}
-          render={({values, handleChange, errors, touched, isValid}) => (
+          render={({values, handleChange, errors, touched}) => (
             <form onSubmit={handleFormSubmit}>
               <div className="fieldLabel forNome">
                 <Field required type="text" name="nome" className={`${touched.name && errors.nome ? 'redPlaceholder' : ''}`} placeholder={`${touched.name && errors.nome ? 'nome é obrigatório' : 'nome'}`}/>
@@ -118,7 +118,7 @@ const Formulario = (props) => {
                 <Field required type="text" name="email"  className={`${touched.email && errors.email ? 'redPlaceholder' : ''}`} placeholder={`${touched.email && errors.email ? 'e-mail é obrigatório' : 'e-mail'}`}/>
               </div>
               <div className="fieldLabel forTelefone">
-                <Field required type="text" name="telefone" placeholder="telefone"/>
+                <Field type="text" name="telefone" className={`${touched.telefone && errors.telefone ? 'telefoneError' : ''}`} placeholder="telefone"/>
               </div>
               <div className="fieldLabel forMensagem">
                 <Field as='textarea' required name="mensagem" rows="4"  className={`${touched.mensagem && errors.mensagem ? 'redPlaceholder' : ''}`} placeholder={`${touched.mensagem && errors.mensagem ? 'mensagem é obrigatória' : 'mensagem'}`}/>

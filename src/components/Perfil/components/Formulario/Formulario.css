@@ -29,6 +29,9 @@
 .formulario .redPlaceholder::placeholder{
   color: #ff3654;
 }
+.formulario .telefoneError{
+  color: #ff3654;
+}
 .formulario button{
   display: block;
   margin: 0 auto;
