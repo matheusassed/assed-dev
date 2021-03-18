@@ -27,7 +27,7 @@
   outline: none;
 }
 .formulario .redPlaceholder::placeholder{
-  color: #F00;
+  color: #ff3654;
 }
 .formulario button{
   display: block;
@@ -41,6 +41,7 @@
   background: #57ABA8;
   color: #FFF;
   width: max-content;
+  outline: none;
 }
 .formulario button:hover {
   background: #FFF;
@@ -59,4 +60,21 @@
   opacity: .7;
   font-size: 16px;
   transition: all ease .3s;
+}
+
+.formulario .submitSuccess, .formulario .submitError{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formulario .submitSuccess h3{
+  color: #57ABA8;
+  margin-bottom: 10px;
+}
+.formulario .submitError h3{
+  color: #ff3654;
+  margin-bottom: 10px;
+}
+.formulario .submitSuccess p , .formulario .submitError p{
+  margin: auto;
 }

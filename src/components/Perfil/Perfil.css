@@ -24,12 +24,16 @@
   border-top: 3px solid #57ABA8;
   border-left: 3px solid #57ABA8;
   margin: 0 auto;
-  transform: rotate(225deg) translateX(30px);
+  transform: rotate(225deg);
   border-radius: 2px;
   cursor: pointer;
   transition: all ease .3s;
+  position: relative;
+  top: -25px;
 }
 
 .rotate{
   transform: rotate(45deg);
+  position: relative;
+  top: 0;
 }
