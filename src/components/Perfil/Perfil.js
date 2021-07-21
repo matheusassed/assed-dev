@@ -5,12 +5,20 @@ import ProfileInfo from './components/ProfileInfo/ProfileInfo';
 import SocialLinks from './components/SocialLinks/SocialLinks';
 import './Perfil.css';
 
-function Perfil() {
+function Perfil(props) {
+
+  const user = props.user;
+
   return(
     <div className='profileCard'>
-      <Photo photoUrl={'https://i.imgur.com/CPvxOnJ.jpg'}/>
+      <Photo photoUrl={user.avatar_url}/>
       <div className='profileCardContent'>
-        <ProfileInfo name='Matheus Assed' role='desenvolvedor de sistemas' actualJob='ímpar' actualJobSite='http://inpartec.com.br' location='Rio de Janeiro, Brasil' />
+        <ProfileInfo 
+          name={user.name}
+          role='analista de sistemas'
+          actualJob={user.company}
+          actualJobSite='https://www.sebrae.com.br/sites/PortalSebrae/ufs/rj?codUf=20'
+          location={user.location} />
         <SocialLinks/>
         <Skills skills={[
           "front end development",
