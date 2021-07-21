@@ -103,8 +103,9 @@ function SocialLinks() {
   return(
     <DivSocialLinks>
       {
-        socialInfo.map((social) => (
+        socialInfo.map((social, index) => (
           <Link 
+            key={index}
             target="_blank" 
             rel="noreferrer" 
             href={social.link} 

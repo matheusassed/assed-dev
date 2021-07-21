@@ -40,8 +40,8 @@ function Skills(props) {
       <SkillTitle>Skills</SkillTitle>
       <SkillList>
         {
-          props.skills.map((skill) => (
-            <Skill>{skill}</Skill>
+          props.skills.map((skill, index) => (
+            <Skill key={index}>{skill}</Skill>
           ))
         }
       </SkillList>
