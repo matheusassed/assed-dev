@@ -3,27 +3,23 @@ import './App.css';
 import Perfil from './components/Perfil/Perfil'
 
 function App() {
+  
   const [userInfo, setUserInfo] = useState();
 
-  async function getUserInfo(){
-    const resposta = await fetch('https://api.github.com/users/matheusassed');
-    const respostaTratada = await resposta.json();
-    return respostaTratada;
-  }
-
   useEffect(() => {
-    getUserInfo().then((resposta) => {
-      setUserInfo(resposta);
-    });
+    fetch('https://api.github.com/users/matheusassed')
+      .then(res => res.json())
+      .then(data => {
+        setUserInfo(data);
+      });
   }, []);
 
-
   return (
+    !!userInfo &&
     <div className="App">
       <Perfil user={userInfo}/>
     </div>
   );
-
 
 }
 
