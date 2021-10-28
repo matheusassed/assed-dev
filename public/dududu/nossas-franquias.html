@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Du Dudu Franquias</title>
+</head>
+<body class="body">
+  <header class="header header-reduzido">
+    <div class="menu">
+      <div class="logo"><img class="imagem-logo-header" src="./img/logo.png"></div>
+      <div class="handle-menu"><div class="hamburger-menu"></div></div>
+      <nav class="navegacao">
+        <a onclick="toggleClass()" href="./index.html#header" class="link-menu">Início</a>
+        <a onclick="toggleClass()" href="./index.html#quem-somos" class="link-menu">Quem somos</a>
+        <a onclick="toggleClass()" href="#" class="link-menu">Conheça nossas franquias</a>
+        <a onclick="toggleClass()" href="./index.html#contato" class="link-menu">Contato</a>
+      </nav>
+    </div>
+
+    <h1 class="titulo">Conheça nossas franquias</h1>
+  </header>
+
+  <main class="main-nossas-franquias">
+    <div class="nossas-franquias-navegacao">
+      <a class="links-navegacao-nossas-franquias" href="#congelados">Congelados</a>
+      <a class="links-navegacao-nossas-franquias" href="#quiosque">Quiosque</a>
+      <a class="links-navegacao-nossas-franquias" href="#restaurante">Restaurante</a>
+    </div>
+
+    <div class="franquia congelados" id="congelados">
+      <h3 class="titulo-sessao titulo-tipo-franquia">Congelados</h3>
+      <div>
+        <img src="./img/congelados/congelados01.jpeg" class="foto-franquia">
+        <p class="descricao-sessao descricao-franquia">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus similique vitae earum est, ducimus ex quasi, illo quis libero sunt rerum dicta iusto laudantium sapiente ad, perspiciatis molestiae aliquid?
+        </p>
+      </div>
+    </div>
+    <div class="franquia quiosque" id="quiosque">
+      <h3 class="titulo-sessao titulo-tipo-franquia">Quiosque</h3>
+      <div>
+        <img src="./img/quiosque/quiosque01.jpeg" class="foto-franquia">
+        <p class="descricao-sessao descricao-franquia">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus similique vitae earum est, ducimus ex quasi, illo quis libero sunt rerum dicta iusto laudantium sapiente ad, perspiciatis molestiae aliquid?
+        </p>
+      </div>
+    </div>
+    <div class="franquia restaurante" id="restaurante">
+      <h3 class="titulo-sessao titulo-tipo-franquia">Kilo Grill</h3>
+      <div>
+        <img src="./img/kilogrill/kilogrill01.jpeg" class="foto-franquia">
+        <p class="descricao-sessao descricao-franquia">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus similique vitae earum est, ducimus ex quasi, illo quis libero sunt rerum dicta iusto laudantium sapiente ad, perspiciatis molestiae aliquid?
+        </p>
+      </div>
+    </div>
+
+    <div class="formulario-nossas-franquias">
+      <form action="POST" class="formulario">
+        <input class="input" type="text" name="nome" id="nome" placeholder="Nome Sobrenome">
+        <input class="input" type="text" name="email" id="email" placeholder="contato@email.com">
+        <input class="input" type="text" name="telefone" id="telefone" placeholder="(00) 00000-0000">
+        <input class="input" type="text" name="cidade" id="cidade" placeholder="Cidade">
+        <div class="checkbox">
+          <input class="input-checkbox" type="checkbox" id="congelados" name="franquia">
+          <label class="label-checkbox" for="congelados">Congelados</label>
+        </div>
+        <div class="checkbox">
+          <input class="input-checkbox" type="checkbox" id="quiosque" name="franquia">
+          <label class="label-checkbox" for="quiosque">Quiosque</label>
+        </div>
+        <div class="checkbox">
+          <input class="input-checkbox" type="checkbox" id="restaurante" name="franquia">
+          <label class="label-checkbox" for="restaurante">Restaurante</label>
+        </div>
+        <button class="button" type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="logo"><img class="imagem-logo-footer" src="./img/logo.png"></div>
+    <div class="links-footer">
+      <div class="navegacao-footer">
+        <a href="#" class="link-navegacao-footer">Início</a>
+        <a href="#quem-somos" class="link-navegacao-footer">Quem somos</a>
+        <a href="./nossas-franquias.html" class="link-navegacao-footer">Conheça nossas franquias</a>
+        <a href="#contato" class="link-navegacao-footer">Contato</a>
+      </div>
+      <div class="redes-sociais">
+        <a href="https://www.instagram.com/confeitariadududu/" target="_blank" class="link-redes-sociais"><img class="imagem-redes-sociais" src="./img/instagram.png"></a>
+        <a href="https://www.facebook.com/ConfeitariaDuDudu/" target="_blank" class="link-redes-sociais"><img class="imagem-redes-sociais" src="./img/facebook.png"></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p class="texto-copyright">© Copyright 2021 | Todos os direitos reservados</p>
+    </div>
+    <div class="desenvolvido-por">
+      <p class="texto-desenvolvido-por">
+        Site desenvolvido por <a href="https://assed.dev" target="_blank" class="link-desenvolvedor">assed.dev</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="./src/index.js"></script>
+</body>
+</html>

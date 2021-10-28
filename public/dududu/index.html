@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <title>Du Dudu Franquias</title>
+
+  <meta name="description" content="descricao">
+  <meta name="keywords" content="keyword, keyword">
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Du Dudu Franquias"/>
+  <meta property="og:description" content="descricao"/>
+  <meta property="og:url" content="http://franquias.dududu.com.br"/>
+  <meta property="og:image" content="./img/logo.png"/>
+</head>
+<body class="body">
+  <header class="header" id="header">
+    <div class="menu">
+      <div class="logo"><img class="imagem-logo-header" src="./img/logo.png"></div>
+      <div class="handle-menu"><div class="hamburger-menu"></div></div>
+      <nav class="navegacao">
+        <a onclick="toggleClass()" href="#header" class="link-menu">Início</a>
+        <a onclick="toggleClass()" href="#quem-somos" class="link-menu">Quem somos</a>
+        <a onclick="toggleClass()" href="./nossas-franquias.html" class="link-menu">Conheça nossas franquias</a>
+        <a onclick="toggleClass()" href="#contato" class="link-menu">Contato</a>
+      </nav>
+    </div>
+
+    <h1 class="titulo">Du Dudu Franquias</h1>
+  </header>
+
+  <main class="main">
+    <div class="sessao quem-somos" id="quem-somos">
+      <div>
+        <h3 class="titulo-sessao">Quem Somos</h3>
+        <p class="descricao-sessao">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem quidem vitae, necessitatibus eius soluta nemo, corrupti totam tempore numquam cumque qui facilis aut nisi sequi nulla laudantium impedit. Commodi, quisquam.
+        </p>
+      </div>
+      <img src="./img/kilogrill/kilogrill12.jpeg" class="quem-somos-img">
+    </div>
+
+    <div class="video"></div>
+
+    <div class="sessao nossas-franquias desktop" id="nossas-franquias">
+      <h3 class="titulo-sessao">Conheça nossas franquias</h3>
+      <div class="nossas-franquias-content-flex-wrapper">
+        <div class="link-franquia link-franquia-congelados">
+          <h4 class="titulo-franquia">Congelados</h4>
+        </div>
+        <div class="link-franquia link-franquia-quiosque">
+          <h4 class="titulo-franquia">Quiosque</h4>
+        </div>
+        <div class="link-franquia link-franquia-restaurante">
+          <h4 class="titulo-franquia">Restaurante</h4>
+        </div>
+      </div>
+      <a href="/nossas-franquias.html" class="botao-verde">Ver mais detalhes</a>
+    </div>
+
+    <div class="sessao nossas-franquias mobile" id="nossas-franquias">
+      <h3 class="titulo-sessao">Conheça nossas franquias</h3>
+      <div class="swiper">
+        <div class="swiper-wrapper franquias-content-flex-wrapper">
+          <div class="swiper-slide">
+            <div class="link-franquia link-franquia-congelados">
+              <h4 class="titulo-franquia">Congelados</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="link-franquia link-franquia-quiosque">
+              <h4 class="titulo-franquia">Quiosque</h4>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="link-franquia link-franquia-restaurante">
+              <h4 class="titulo-franquia">Restaurante</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="swiperMobile">
+        <div class="swiper-wrapper franquias-content-flex-wrapper">
+          <div class="swiper-slide link-franquia link-franquia-congelados">
+            <h4 class="titulo-franquia">Congelados</h4>
+          </div>
+          <div class="swiper-slide link-franquia link-franquia-quiosque">
+            <h4 class="titulo-franquia">Quiosque</h4>
+          </div>
+          <div class="swiper-slide link-franquia link-franquia-restaurante">
+            <h4 class="titulo-franquia">Restaurante</h4>
+          </div>
+        </div>
+      </div>
+      <a href="/nossas-franquias.html" class="botao-verde">Ver mais detalhes</a>
+    </div>
+
+    <div class="sessao contato" id="contato">
+      <h3 class="titulo-sessao">Deixe sua mensagem</h3>
+      <form action="POST" class="formulario formphp form" action="enviar.php" method="post" name="form">
+        <input class="input" type="text" name="nome" id="nome" placeholder="Nome Sobrenome">
+        <input class="input" type="text" name="email" id="email" placeholder="contato@email.com">
+        <input class="input" type="text" name="telefone" id="telefone" placeholder="(00) 00000-0000">
+        <input class="input" type="text" name="cidade" id="cidade" placeholder="Cidade">
+        
+        <textarea class="textarea" name="mensagem" id="mensagem" rows="10" placeholder="Sua mensagem"></textarea>
+
+        <div class="push-button-to-right">
+          <label class="not_show">Se você não é um robô, deixe em branco.</label>
+          <input type="text" class="not_show" name="leaveblank">
+          <label class="not_show">Se você não é um robô, não mude este campo.</label>
+          <input type="text" class="not_show" name="dontchange" value="http://" >
+        </div>
+        
+        <button class="button" id="enviar" name="enviar" type="submit">Enviar</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="logo"><img class="imagem-logo-footer" src="./img/logo.png"></div>
+    <div class="links-footer">
+      <div class="navegacao-footer">
+        <a href="#" class="link-navegacao-footer">Início</a>
+        <a href="#quem-somos" class="link-navegacao-footer">Quem somos</a>
+        <a href="./nossas-franquias.html" class="link-navegacao-footer">Conheça nossas franquias</a>
+        <a href="#contato" class="link-navegacao-footer">Contato</a>
+      </div>
+      <div class="redes-sociais">
+        <a href="https://www.instagram.com/confeitariadududu/" target="_blank" class="link-redes-sociais"><img class="imagem-redes-sociais" src="./img/instagram.png"></a>
+        <a href="https://www.facebook.com/ConfeitariaDuDudu/" target="_blank" class="link-redes-sociais"><img class="imagem-redes-sociais" src="./img/facebook.png"></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p class="texto-copyright">© Copyright 2021 | Todos os direitos reservados</p>
+    </div>
+    <div class="desenvolvido-por">
+      <p class="texto-desenvolvido-por">
+        Site desenvolvido por <a href="https://assed.dev" target="_blank" class="link-desenvolvedor">assed.dev</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script type="module">
+    import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js';
+    const screenWidth = window.innerWidth;
+    if(screenWidth <= 580){
+      const swiper = new Swiper('.swiperMobile', {
+        effect: "cards",
+        spaceBetween: 0,
+        slidesPerView: 1,
+      });
+    } else if(screenWidth <= 768){
+      const swiper = new Swiper('.swiper', {
+        effect: "slide",
+        grabCursor: true,
+        slidesPerView: "auto",
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    }
+  </script>
+  <script src="./src/libs/jquery-1.11.2.min.js"></script>
+  <script src="./src/form.js"></script>
+  <script src="./src/index.js"></script>
+</body>
+</html>
