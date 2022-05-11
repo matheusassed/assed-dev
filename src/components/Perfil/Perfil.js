@@ -31,8 +31,7 @@ function Perfil(props) {
           "jquery",
           "ux",
           "game design",
-          "typescript",
-          "sql"
+          "typescript"
         ]}/>
       </div>
     </div>
